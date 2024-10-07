@@ -11,12 +11,12 @@ def process(file: FileBodyPart, fields: Map[String, String]): Future[Result]
 When the method will also receive all field values that were before the file part in the body.
 
 
-The **MultipartBodyParser** expore following assumptions:
+The **MultipartBodyParser** is a demo code that expores the following assumptions:
 
-1. There is only one file in the form (at least it stops after the first file).
-2. The uploaded file is plan text file and is uploaded as text/plain.
-3. Lines (separated by *\n*) - as in field values as in the uploaded file - are no longer than maxStringLen=4096 including *\r*.
-4. There are no empty lines in the uploaded file (if the lines in it are separated by *\r\n*) either there are no lines with only char *\r* (if the lines are separated by *\n*).
+1. There is only one file in the form (at least it takes only the first file part).
+2. All uploaded files are plan text files and they are uploaded as text/plain data.
+3. Lines (separated by *\n*) - both inside field values and in the uploaded file content - are no longer than maxStringLen=4096 bytes (including trailing *\r* if present).
+4. There are no empty lines inside the uploaded file (if we count lines separated by *\r\n*) either there are no lines with only char *\r* (if the lines are separated by *\n* only).
 
 See also:
 
