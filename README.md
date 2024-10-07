@@ -20,6 +20,6 @@ The **MultipartBodyParser** expore following assumptions:
 
 See also:
 
-1. [https://github.com/playframework/playframework/issues/9852](https://https://github.com/playframework/playframework/issues/9852)
+1. [https://github.com/playframework/playframework/issues/9852](https://github.com/playframework/playframework/issues/9852)
 2. [https://github.com/playframework/playframework/pull/10309](https://github.com/playframework/playframework/pull/10309)
 3. [Multipart input file streaming in Akka-Http](https://github.com/shestero/formfile)
