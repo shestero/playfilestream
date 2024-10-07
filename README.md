@@ -1,14 +1,15 @@
-# playfilestream
+# Parse a file part of multi-part form data stream directly to a stream
 
-How to get file data stream from multipart body in Play3.
+Demo project: how to get file data stream from multipart body in Play3.
 
-To process input file as stream you are to override
+To process input file as stream you are to override:
 
 ```
 def process(file: FileBodyPart, fields: Map[String, String]): Future[Result]
 ```
 
-When the method will also receive all field values that were before the file part in the body.
+When the method will also get all field values that were sent before the file part in the body.
+Result may be an output steam or a value.
 
 
 The **MultipartBodyParser** is a demo code that expores the following assumptions:
