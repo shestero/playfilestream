@@ -24,3 +24,4 @@ See also:
 1. [https://github.com/playframework/playframework/issues/9852](https://github.com/playframework/playframework/issues/9852)
 2. [https://github.com/playframework/playframework/pull/10309](https://github.com/playframework/playframework/pull/10309)
 3. [Multipart input file streaming in Akka-Http](https://github.com/shestero/formfile)
+4. [RFC 1341 7.2](https://www.w3.org/Protocols/rfc1341/7_2_Multipart.html)
