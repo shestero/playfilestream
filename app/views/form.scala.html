@@ -1,0 +1,22 @@
+@import views.html.helper.CSRF
+
+@(implicit request: MessagesRequestHeader)
+@main("Upload file form") {
+  @helper.form(action = routes.UploadController.upload, Symbol("enctype") -> "multipart/form-data") {
+    @CSRF.formField
+    <label class="form__input_text w-1o2">
+      <div class="form__input_file__filename">Text field</div>
+      <input type="text" name="tfield" value="1-2-3">
+    </label>
+    <label class="form__input_file w-1o2">
+      <div class="form__input_file__filename">Add file here</div>
+      <input type="file" name="ffield">
+    </label>
+    <label class="form__input_text w-1o2">
+      <div class="form__input_file__filename">Text field 2 (after file)</div>
+      <input type="text" name="tfield2" value="4-5">
+    </label>
+    <input type="reset">
+    <input type="submit">
+  }
+}
