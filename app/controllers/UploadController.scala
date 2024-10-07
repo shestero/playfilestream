@@ -48,7 +48,9 @@ class UploadController @Inject()(
   }
 
   def upload: Action[_] = Action(verbatimBodyParser) { request =>
-    Source.future(parseMultipartRequest(request).map(_.getOrElse("ERROR: No file!")))
+    parseMultipartRequest(request)
+      .map(_.getOrElse("ERROR: No file!")))
+      .pipe(Source.future)
       .keepAlive(10.seconds, () => "... [keep alive message each 10 seconds!] ...")
       .map(_ + "\n")
       .map(ByteString.apply)
